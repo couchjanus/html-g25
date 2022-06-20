@@ -1,0 +1,13 @@
+:root {
+    --bs-header-color: #3c086c;
+    --bs-body-font-size: 8em;
+    --bs-font-sans-serif: "Libre Franklin", sans-serif;
+}
+.h2 {
+    color: var(--bs-header-color);
+    font-size: var(--bs-body-font-size);
+}
+
+body {
+    font-family:  var(--bs-font-sans-serif);
+}
