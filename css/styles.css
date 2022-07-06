@@ -978,38 +978,9 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 }
 
 
-.form-control {
-    display: block;
-    width: 100%;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color:rgba(0, 0, 0, 0.8);
-    background-color: #fff;
-    border: 1px solid #ced4da;
-}
-
-.form-select {
-    display: block;
-    width: 100%;
-    padding: .375rem 2.25rem .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color:rgba(0, 0, 0, 0.8);
-    background-color: #fff;
-    border: 1px solid #ced4da;
-}
-
-.form-select-lg {
-   
-    padding-top: .6rem;
-    padding-bottom: .6rem;
-    padding-left: 1rem;
-}
-
 
 /* common */
-/* .d-flex {
+.d-flex {
     display: flex !important;
 }
 
@@ -1056,10 +1027,10 @@ input, button, select, optgroup, textarea {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
-} */
+}
 
 /* form */
-/* 
+
 .form-control {
     display: block;
     width: 100%;
@@ -1165,9 +1136,9 @@ input, button, select, optgroup, textarea {
     background-color: #e9ecef;
     border: 1px solid #ced4da;
     border-radius: 0;
-} */
+}
 /* quantity */
-/* 
+
 .quantity {
     display: flex;
     align-items: center;
@@ -1181,11 +1152,11 @@ input, button, select, optgroup, textarea {
     border: none;
     width: 1rem;
     outline: none;
-} */
+}
 
 
 /* table */
-/* 
+
 .table-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -1239,4 +1210,4 @@ thead, tbody, tfoot, tr, td, th {
 
 .border {
     border: 1px solid #dee2e6 !important;
-} */
+}
