@@ -428,7 +428,6 @@ h6, .h6 {
 
 }
 
-
 .position-relative {
     position: relative !important;
 }
@@ -919,15 +918,16 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
     transform: none;
 }
 
-.product .badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    z-index: 1;
-}
 
 .product-view {
     min-height: 20rem;
+}
+
+.bg-cover {
+    background-size: cover !important;
+}
+.bg-center {
+    background-position: center center !important;
 }
 
 .btn {
@@ -980,12 +980,17 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 
 
 /* common */
+
 .d-flex {
     display: flex !important;
 }
 
 .d-block {
     display: block !important;
+}
+
+.d-inline-block {
+    display: inline-block !important;
 }
 
 .justify-content-between {
@@ -1008,7 +1013,6 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
     margin-right: auto !important;
     margin-left: auto !important;
 }
-
 
 label {
     display: inline-block;
@@ -1107,22 +1111,27 @@ input, button, select, optgroup, textarea {
     flex-wrap: wrap;
     align-items: stretch;
     width: 100%}
+
 .input-group>.form-control, .input-group>.form-select {
     position: relative;
     flex: 1 1 auto;
     width: 1%;
     min-width: 0;
 }
+
 .input-group>.form-control:focus, .input-group>.form-select:focus {
     z-index: 3;
 }
+
 .input-group .btn {
     position: relative;
     z-index: 2;
 }
+
 .input-group .btn:focus {
     z-index: 3;
 }
+
 .input-group-text {
     display: flex;
     align-items: center;
@@ -1137,6 +1146,7 @@ input, button, select, optgroup, textarea {
     border: 1px solid #ced4da;
     border-radius: 0;
 }
+
 /* quantity */
 
 .quantity {
@@ -1211,3 +1221,198 @@ thead, tbody, tfoot, tr, td, th {
 .border {
     border: 1px solid #dee2e6 !important;
 }
+
+
+
+.carousel {
+  align-items: center;
+  background: #fff;
+  display: flex;
+  
+  justify-content: center;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 960px;
+}
+
+.slider::before, .slider::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slider .slide {
+  height: 100px;
+  width: 250px;
+
+}
+
+.slider .slide img {
+    display: block;
+    height: 100px;
+  width: 250px;
+  object-fit: cover;
+    
+  /*overflow: hidden;*/
+}
+
+/* modal */
+
+.text-warning {
+    color: gold;
+}
+.bg-cover {
+    background-size: cover !important;
+}
+
+.bg-center {
+    background-position: center center !important;
+}
+.h-100 {
+    height: 100%;
+}
+.w-100 {
+    width: 100%;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.4s;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+}
+
+
+.modal:target {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.modal-dialog {
+    width: auto;
+    margin: .5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
+}
+.btn-close {
+    width: 1em;
+    height: 1em;
+    padding: .25em;
+    color: #000;
+    border: 0;
+    border-radius: .25rem;
+    opacity: .5;
+}
+
+.btn-close:hover {
+    color: #000;
+    opacity: 1;
+}
+
+.btn-dark {
+    color: white;
+    background-color: #212529;
+    border-color: #ced4da;
+    padding: 0.4em 0.7em;
+    font-size: 0.6rem;
+    align-items:center;
+    margin-left: 0.75rem;
+}
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.modal-body {
+   position: relative;
+   flex: 1 1 auto;
+   padding: 1rem;
+}
+
+.btn-primary {
+    color: white;
+    background-color: indigo;
+    background-color: darkblue;
+    padding: 0.35rem 2rem;
+    margin-top: 2rem;
+
+}
+/* badge */
+
+/* .badge {
+    display: inline-block;
+    padding: .35em .65em;
+    font-size: .8em;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0;
+} */
+
+.product .badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+}
+/* 
+.bg-primary {
+    background-color: red !important;
+} */
